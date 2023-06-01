@@ -1,6 +1,6 @@
 <?php
 
-namespace PiwikPro\Client;
+namespace PiwikPro\ReportingApi;
 
 use \GuzzleHttp\ClientInterface as GuzzleHttpClientInterface;
 use GuzzleHttp\Psr7\Response;
