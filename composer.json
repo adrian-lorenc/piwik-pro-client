@@ -1,6 +1,6 @@
 {
-  "name": "adrian-lorenc/piwik-pro-client",
-  "description": "PHP client library to query the Piwik pro.",
+  "name": "adrian-lorenc/piwik-pro-reporting-api",
+  "description": "PHP client library to query the Piwik Pro Reporting API.",
   "type": "library",
   "license": "GPL-3.0",
   "authors": [
@@ -13,7 +13,7 @@
   "prefer-stable": true,
   "autoload": {
     "psr-4": {
-      "PiwikPro\\Client\\": "src/"
+      "PiwikPro\\ReportingApi\\": "src/"
     }
   },
   "require": {

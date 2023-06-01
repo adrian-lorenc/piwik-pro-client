@@ -1,1 +1,1 @@
-# piwik-pro-client
+# Piwik Pro Reporting API
