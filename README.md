@@ -28,7 +28,8 @@ $query = (new DirectQuery('website_id'))
     ->setLimit(10)
     ->setOffset(0)
     ->setDateFrom($dateFrom)
-    ->setDateTo($dateTo);
+    ->setDateTo($dateTo)
+    ->addOrderBy(2, Direction::ASC);
 
 echo '<pre>';
 var_dump(json_decode($client->request($query)->getBody()->getContents(), true));

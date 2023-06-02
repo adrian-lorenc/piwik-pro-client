@@ -7,6 +7,7 @@ use PiwikPro\ReportingApi\Query\Model\Column;
 use PiwikPro\ReportingApi\Query\Parameter\ColumnFormatTrait;
 use PiwikPro\ReportingApi\Query\Parameter\DateFromTrait;
 use PiwikPro\ReportingApi\Query\Parameter\DateToTrait;
+use PiwikPro\ReportingApi\Query\Parameter\FiltersTrait;
 use PiwikPro\ReportingApi\Query\Parameter\LimitTrait;
 use PiwikPro\ReportingApi\Query\Parameter\OffsetTrait;
 use PiwikPro\ReportingApi\Query\Parameter\RelativeDateTrait;
@@ -20,6 +21,7 @@ abstract class QueryBase implements JsonSerializable, QueryInterface
     use DateFromTrait;
     use DateToTrait;
     use RelativeDateTrait;
+    use FiltersTrait;
     use OffsetTrait;
     use LimitTrait;
     use ColumnFormatTrait;

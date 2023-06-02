@@ -16,7 +16,12 @@ trait JsonSerializer
     public function jsonSerialize(): array
     {
         return array_filter(get_object_vars($this), function ($value) {
-            return !is_null($value);
+            return
+                // Skip values which are not set.
+                !is_null($value)
+                &&
+                // Skip empty arrays.
+                !(is_array($value) && empty($value));
         });
     }
 }
