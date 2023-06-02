@@ -2,18 +2,18 @@
 
 namespace PiwikPro\ReportingApi;
 
-use \GuzzleHttp\ClientInterface as GuzzleHttpClientInterface;
+use GuzzleHttp\ClientInterface as GuzzleHttpClientInterface;
 use GuzzleHttp\Psr7\Response;
 use PiwikPro\ReportingApi\Query\QueryInterface;
 
 /**
- * Piwik pro Client.
+ * Piwik Pro client.
  */
 class Client implements ClientInterface
 {
 
     /**
-     * Constructs a new Client object.
+     * Constructs a new client object.
      *
      * @param \GuzzleHttp\ClientInterface $guzzleHTTPClient
      *   The Guzzle HTTP client.

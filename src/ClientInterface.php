@@ -19,6 +19,8 @@ interface ClientInterface
      *
      * @return \GuzzleHttp\Psr7\Response
      *   Response.
+     *
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function request(QueryInterface $query): Response;
 
