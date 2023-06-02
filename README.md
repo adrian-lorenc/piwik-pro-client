@@ -10,25 +10,22 @@ require '../vendor/autoload.php';
 
 use PiwikPro\ReportingApi\Builder\ClientBuilder;
 use PiwikPro\ReportingApi\Query\DirectQuery;
-use PiwikPro\ReportingApi\Query\Parameter\Column;
-use PiwikPro\ReportingApi\Query\Parameter\Date;
-use PiwikPro\ReportingApi\Client\Query\Parameter\RelativeDate;
+use PiwikPro\ReportingApi\Query\Model\Column;
+use PiwikPro\ReportingApi\Query\Model\Date;
 
-$clientBuilder = ClientBuilder::create('https://xyz.piwik.pro',
+$client = (ClientBuilder::create('https://xyz.piwik.pro',
     'client_id',
     'client_secret'
-);
-$client = $clientBuilder->getClient();
+))->buildClient();
 
 $dateFrom = new Date(new \DateTime('01/01/2021'));
 $dateTo = new Date(new \DateTime('03/30/2021'));
 
-$query = new DirectQuery('website_id', [
-    new Column('goal_uuid'),
-    new Column('goal_conversions'),
-    new Column('goal_revenue', 'sum'),
-]);
-$query->setLimit(10)
+$query = (new DirectQuery('website_id'))
+    ->addColumn(new Column('goal_uuid'))
+    ->addColumn(new Column('goal_conversions'))
+    ->addColumn(new Column('goal_revenue', 'sum'))
+    ->setLimit(10)
     ->setOffset(0)
     ->setDateFrom($dateFrom)
     ->setDateTo($dateTo);

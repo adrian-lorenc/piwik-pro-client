@@ -1,9 +1,9 @@
 <?php
 
-namespace PiwikPro\ReportingApi\Query\Parts;
+namespace PiwikPro\ReportingApi\Query\Parameter;
 
 
-use PiwikPro\ReportingApi\Query\Parameter\Date;
+use PiwikPro\ReportingApi\Query\Model\Date;
 
 /**
  * DateTo param.
@@ -17,7 +17,7 @@ trait DateToTrait
      * Cannot be used with relative_date field at the same time. Mandatory if
      * relative_date is not used.
      *
-     * @var \PiwikPro\ReportingApi\Query\Parameter\Date
+     * @var \PiwikPro\ReportingApi\Query\Model\Date
      */
     protected Date $date_to;
 
@@ -27,10 +27,10 @@ trait DateToTrait
      * @param Date $date
      *   date.
      *
-     * @return mixed
+     * @return $this
      *   Query object.
      */
-    public function setDateTo(Date $date): self
+    public function setDateTo(Date $date): static
     {
         $this->date_to = $date;
 

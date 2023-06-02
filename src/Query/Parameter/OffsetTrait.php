@@ -1,6 +1,6 @@
 <?php
 
-namespace PiwikPro\ReportingApi\Query\Parts;
+namespace PiwikPro\ReportingApi\Query\Parameter;
 
 /**
  * offset param.
@@ -24,7 +24,7 @@ trait OffsetTrait
      * @return mixed
      *   Query object.
      */
-    public function setOffset(int $offset): self
+    public function setOffset(int $offset): static
     {
         $this->offset = $offset;
 

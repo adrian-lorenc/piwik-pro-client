@@ -1,6 +1,6 @@
 <?php
 
-namespace PiwikPro\ReportingApi\Query\Parts;
+namespace PiwikPro\ReportingApi\Query\Parameter;
 
 
 /**
@@ -22,10 +22,10 @@ trait LimitTrait
      * @param int $limit
      *   Limit.
      *
-     * @return mixed
+     * @return $this
      *   Query object.
      */
-    public function setLimit(int $limit): self
+    public function setLimit(int $limit): static
     {
         $this->limit = $limit;
 

@@ -14,7 +14,7 @@ interface ClientInterface
     /**
      * Performs query.
      *
-     * @param \PiwikPro\ReportingApi\Query\QueryInterface $query
+     * @param \JsonSerializable&\PiwikPro\ReportingApi\Query\QueryInterface $query
      *   Piwik query.
      *
      * @return \GuzzleHttp\Psr7\Response
@@ -22,6 +22,6 @@ interface ClientInterface
      *
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function request(QueryInterface $query): Response;
+    public function request(QueryInterface & \JsonSerializable $query): Response;
 
 }

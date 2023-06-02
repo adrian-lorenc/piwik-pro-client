@@ -26,7 +26,7 @@ class Client implements ClientInterface
     /**
      * {@inheritdoc}
      */
-    public function request(QueryInterface $query): Response
+    public function request(QueryInterface & \JsonSerializable $query): Response
     {
         return $this->guzzleHTTPClient->post($query->getUri(), [
             'body' => json_encode($query),

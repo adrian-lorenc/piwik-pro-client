@@ -1,9 +1,8 @@
 <?php
 
-namespace PiwikPro\ReportingApi\Query\Parts;
+namespace PiwikPro\ReportingApi\Query\Parameter;
 
-
-use PiwikPro\ReportingApi\Query\Parameter\Date;
+use PiwikPro\ReportingApi\Query\Model\Date;
 
 /**
  * DateFrom param.
@@ -17,7 +16,7 @@ trait DateFromTrait
      * Cannot be used with relative_date field at the same time. Mandatory if
      * relative_date is not used.
      *
-     * @var \PiwikPro\ReportingApi\Query\Parameter\Date
+     * @var \PiwikPro\ReportingApi\Query\Model\Date
      */
     protected Date $date_from;
 
@@ -27,10 +26,10 @@ trait DateFromTrait
      * @param Date $date
      *   date.
      *
-     * @return mixed
+     * @return $this
      *   Query object.
      */
-    public function setDateFrom(Date $date): self
+    public function setDateFrom(Date $date): static
     {
         $this->date_from = $date;
 

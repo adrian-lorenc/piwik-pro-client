@@ -1,6 +1,6 @@
 <?php
 
-namespace PiwikPro\ReportingApi\Query\Parameter;
+namespace PiwikPro\ReportingApi\Query\Model;
 
 use PiwikPro\ReportingApi\Query\JsonSerializer;
 

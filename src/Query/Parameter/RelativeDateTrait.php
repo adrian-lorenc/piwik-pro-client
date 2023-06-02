@@ -1,8 +1,8 @@
 <?php
 
-namespace PiwikPro\ReportingApi\Query\Parts;
+namespace PiwikPro\ReportingApi\Query\Parameter;
 
-use PiwikPro\ReportingApi\Query\Parameter\RelativeDate;
+use PiwikPro\ReportingApi\Query\Model\RelativeDate;
 
 /**
  * Relative date param.
@@ -15,19 +15,20 @@ trait RelativeDateTrait
      *
      * Cannot be used with absolute date fields at the same time.
      *
-     * @var \PiwikPro\ReportingApi\Query\Parameter\RelativeDate
+     * @var \PiwikPro\ReportingApi\Query\Model\RelativeDate
      */
     protected RelativeDate $relative_date;
 
     /**
      * Sets relative date.
      *
-     * @param \PiwikPro\ReportingApi\Query\Parameter\RelativeDate $date
+     * @param \PiwikPro\ReportingApi\Query\Model\RelativeDate $date
      *   Relative date.
      *
-     * @return mixed
+     * @return $this
+     *   Query object.
      */
-    public function setRelativeDate(RelativeDate $date): self
+    public function setRelativeDate(RelativeDate $date): static
     {
         $this->relative_date = $date;
 
