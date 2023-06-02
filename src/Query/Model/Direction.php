@@ -2,10 +2,12 @@
 
 namespace PiwikPro\ReportingApi\Query\Model;
 
+use JsonSerializable;
+
 /**
  * Order direction.
  */
-enum Direction: string implements \JsonSerializable
+enum Direction: string implements JsonSerializable
 {
     case ASC = 'asc';
     case DESC = 'desc';
@@ -13,7 +15,7 @@ enum Direction: string implements \JsonSerializable
     /**
      * {@inheritdoc}
      */
-    public function jsonSerialize(): mixed
+    public function jsonSerialize(): string
     {
         return $this->value;
     }

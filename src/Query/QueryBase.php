@@ -2,18 +2,19 @@
 
 namespace PiwikPro\ReportingApi\Query;
 
+use JsonSerializable;
 use PiwikPro\ReportingApi\Query\Model\Column;
+use PiwikPro\ReportingApi\Query\Parameter\ColumnFormatTrait;
 use PiwikPro\ReportingApi\Query\Parameter\DateFromTrait;
 use PiwikPro\ReportingApi\Query\Parameter\DateToTrait;
 use PiwikPro\ReportingApi\Query\Parameter\LimitTrait;
 use PiwikPro\ReportingApi\Query\Parameter\OffsetTrait;
-use PiwikPro\ReportingApi\Query\Parameter\OrderByTrait;
 use PiwikPro\ReportingApi\Query\Parameter\RelativeDateTrait;
 
 /**
  * Base query class.
  */
-abstract class QueryBase implements \JsonSerializable, QueryInterface
+abstract class QueryBase implements JsonSerializable, QueryInterface
 {
     use JsonSerializer;
     use DateFromTrait;
@@ -21,12 +22,12 @@ abstract class QueryBase implements \JsonSerializable, QueryInterface
     use RelativeDateTrait;
     use OffsetTrait;
     use LimitTrait;
-    use OrderByTrait;
+    use ColumnFormatTrait;
 
     /**
      * Column definitions for the query.
      *
-     * @var \PiwikPro\ReportingApi\Query\Model\Column[] $columns
+     * @var Column[] $columns
      */
     protected array $columns = [];
 

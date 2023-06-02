@@ -2,6 +2,8 @@
 
 namespace PiwikPro\ReportingApi\Query;
 
+use PiwikPro\ReportingApi\Query\Parameter\OrderByTrait;
+
 /**
  * Querying the database directly.
  *
@@ -9,6 +11,8 @@ namespace PiwikPro\ReportingApi\Query;
  */
 class DirectQuery extends QueryBase
 {
+    use OrderByTrait;
+
     /**
      * {@inheritdoc}
      */

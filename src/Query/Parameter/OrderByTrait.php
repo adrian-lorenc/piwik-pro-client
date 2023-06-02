@@ -12,18 +12,20 @@ trait OrderByTrait
     /**
      * Array of sorting directives.
      *
-     * Each directive is a 2-element array with 0-based colum index and direction).
-     * You can sort on more than one column. By default sorts descending by the first metric in query.
+     * Each directive is a 2-element array with 0-based colum index and direction.
+     * You can sort on more than one column. By default, sorts descending by the first metric in query.
      *
-     * @var \PiwikPro\ReportingApi\Query\Model\RelativeDate
+     * @var array
      */
     protected array $order_by = [];
 
     /**
      * Adds order by param.
      *
-     * @param \PiwikPro\ReportingApi\Query\Model\RelativeDate $date
-     *   Relative date.
+     * @param int $columnIndex
+     *   Column index.
+     * @param Direction $direction
+     *   Direction.
      *
      * @return $this
      *   Query object.

@@ -10,10 +10,10 @@ trait JsonSerializer
     /**
      * It serializes object.
      *
-     * @return mixed
+     * @return array
      *   Data which can be serialized by json_encode, which is a value of any type other than a resource.
      */
-    public function jsonSerialize(): mixed
+    public function jsonSerialize(): array
     {
         return array_filter(get_object_vars($this), function ($value) {
             return !is_null($value);

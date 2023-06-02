@@ -2,7 +2,9 @@
 
 namespace PiwikPro\ReportingApi;
 
+use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Response;
+use JsonSerializable;
 use PiwikPro\ReportingApi\Query\QueryInterface;
 
 /**
@@ -13,13 +15,13 @@ interface ClientInterface
     /**
      * Performs query.
      *
-     * @param \JsonSerializable&\PiwikPro\ReportingApi\Query\QueryInterface $query
+     * @param JsonSerializable&QueryInterface $query
      *   Piwik query.
      *
-     * @return \GuzzleHttp\Psr7\Response
+     * @return Response
      *   Response.
      *
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws GuzzleException
      */
-    public function request(QueryInterface & \JsonSerializable $query): Response;
+    public function request(QueryInterface & JsonSerializable $query): Response;
 }

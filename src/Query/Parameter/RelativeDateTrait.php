@@ -14,14 +14,14 @@ trait RelativeDateTrait
      *
      * Cannot be used with absolute date fields at the same time.
      *
-     * @var \PiwikPro\ReportingApi\Query\Model\RelativeDate
+     * @var RelativeDate
      */
     protected RelativeDate $relative_date;
 
     /**
      * Sets relative date.
      *
-     * @param \PiwikPro\ReportingApi\Query\Model\RelativeDate $date
+     * @param RelativeDate $date
      *   Relative date.
      *
      * @return $this

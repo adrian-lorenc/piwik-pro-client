@@ -2,6 +2,7 @@
 
 namespace PiwikPro\ReportingApi\Query\Model;
 
+use JsonSerializable;
 use PiwikPro\ReportingApi\Query\JsonSerializer;
 
 /**
@@ -9,7 +10,7 @@ use PiwikPro\ReportingApi\Query\JsonSerializer;
  *
  * Column definition for the query.
  */
-class Column implements \JsonSerializable
+class Column implements JsonSerializable
 {
     use JsonSerializer;
 

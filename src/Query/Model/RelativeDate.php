@@ -2,10 +2,12 @@
 
 namespace PiwikPro\ReportingApi\Query\Model;
 
+use JsonSerializable;
+
 /**
  * Relative date.
  */
-enum RelativeDate: string implements \JsonSerializable
+enum RelativeDate: string implements JsonSerializable
 {
     case Today = 'today';
     case Yesterday = 'yesterday';
@@ -16,7 +18,7 @@ enum RelativeDate: string implements \JsonSerializable
     /**
      * {@inheritdoc}
      */
-    public function jsonSerialize(): mixed
+    public function jsonSerialize(): string
     {
         return $this->value;
     }

@@ -15,7 +15,7 @@ trait DateToTrait
      * Cannot be used with relative_date field at the same time. Mandatory if
      * relative_date is not used.
      *
-     * @var \PiwikPro\ReportingApi\Query\Model\Date
+     * @var Date
      */
     protected Date $date_to;
 

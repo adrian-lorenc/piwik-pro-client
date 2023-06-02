@@ -4,6 +4,7 @@ namespace PiwikPro\ReportingApi;
 
 use GuzzleHttp\ClientInterface as GuzzleHttpClientInterface;
 use GuzzleHttp\Psr7\Response;
+use JsonSerializable;
 use PiwikPro\ReportingApi\Query\QueryInterface;
 
 /**
@@ -14,7 +15,7 @@ class Client implements ClientInterface
     /**
      * Constructs a new client object.
      *
-     * @param \GuzzleHttp\ClientInterface $guzzleHTTPClient
+     * @param GuzzleHttpClientInterface $guzzleHTTPClient
      *   The Guzzle HTTP client.
      */
     public function __construct(
@@ -25,7 +26,7 @@ class Client implements ClientInterface
     /**
      * {@inheritdoc}
      */
-    public function request(QueryInterface & \JsonSerializable $query): Response
+    public function request(QueryInterface & JsonSerializable $query): Response
     {
         return $this->guzzleHTTPClient->post($query->getUri(), [
             'body' => json_encode($query),

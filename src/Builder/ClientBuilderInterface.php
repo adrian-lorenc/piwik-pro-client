@@ -19,7 +19,7 @@ interface ClientBuilderInterface
      * @param string $clientSecret
      *   Client secret.
      *
-     * @return \PiwikPro\ReportingApi\Builder\ClientBuilderInterface
+     * @return ClientBuilderInterface
      *   The new QueryFactory object.
      */
     public static function create(string $baseUri, string $clientId, string $clientSecret): self;
@@ -27,7 +27,7 @@ interface ClientBuilderInterface
     /**
      * Builds Piwik Pro client.
      *
-     * @return \PiwikPro\ReportingApi\ClientInterface
+     * @return ClientInterface
      */
     public function buildClient(): ClientInterface;
 }
