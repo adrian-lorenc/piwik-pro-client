@@ -2,7 +2,7 @@
   "name": "adrian-lorenc/piwik-pro-reporting-api",
   "description": "PHP client library to query the Piwik Pro Reporting API.",
   "type": "library",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-only",
   "authors": [
     {
       "name": "Adrian lorenc",
