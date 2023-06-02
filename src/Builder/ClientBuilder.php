@@ -35,18 +35,19 @@ class ClientBuilder implements ClientBuilderInterface
     /**
      * {@inheritdoc}
      */
-    public function getClient(): ClientInterface
+    public function buildClient(): ClientInterface
     {
-        // Authorization client - this is used to request OAuth access tokens
-        $reauth_client = new GuzzleClient([
+        // Authorization client - this is used to request OAuth access tokens.
+        $reauthClient = new GuzzleClient([
             'base_uri' => $this->baseUri . '/auth/token',
         ]);
-        $reauth_config = [
+
+        $reauthConfig = [
             'client_id' => $this->clientId,
             'client_secret' => $this->clientSecret,
         ];
-        $grant_type = new ClientCredentials($reauth_client, $reauth_config);
-        $oauth = new OAuth2Middleware($grant_type);
+        $grantType = new ClientCredentials($reauthClient, $reauthConfig);
+        $oauth = new OAuth2Middleware($grantType);
 
         $stack = HandlerStack::create();
         $stack->push($oauth);

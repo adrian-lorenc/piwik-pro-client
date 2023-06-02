@@ -34,6 +34,6 @@ $query->setLimit(10)
     ->setDateTo($dateTo);
 
 echo '<pre>';
-var_dump(json_decode($client->request($query)->getBody()->getContents()));
+var_dump(json_decode($client->request($query)->getBody()->getContents(), true));
 echo '</pre>';
 ```

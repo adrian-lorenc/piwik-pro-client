@@ -26,10 +26,10 @@ interface ClientBuilderInterface
     public static function create(string $baseUri, string $clientId, string $clientSecret): self;
 
     /**
-     * Gets Piwik Pro client.
+     * Builds Piwik Pro client.
      *
      * @return \PiwikPro\ReportingApi\ClientInterface
      */
-    public function getClient(): ClientInterface;
+    public function buildClient(): ClientInterface;
 
 }
