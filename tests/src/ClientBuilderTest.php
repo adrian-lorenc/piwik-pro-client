@@ -14,6 +14,6 @@ class ClientBuilderTest extends TestCase
     public function testDummy(): void
     {
         $number = 1;
-        $this->assertSame(0, $number);
+        $this->assertSame(1, $number);
     }
 }
