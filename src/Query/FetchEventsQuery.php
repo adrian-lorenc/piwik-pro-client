@@ -9,7 +9,6 @@ namespace PiwikPro\ReportingApi\Query;
  */
 class FetchEventsQuery extends QueryBase
 {
-
     /**
      * {@inheritdoc}
      */
@@ -17,6 +16,4 @@ class FetchEventsQuery extends QueryBase
     {
         return '/api/analytics/v1/events/';
     }
-
 }
-

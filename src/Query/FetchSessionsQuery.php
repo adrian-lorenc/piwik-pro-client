@@ -9,7 +9,6 @@ namespace PiwikPro\ReportingApi\Query;
  */
 class FetchSessionsQuery extends QueryBase
 {
-
     /**
      * {@inheritdoc}
      */
@@ -17,6 +16,4 @@ class FetchSessionsQuery extends QueryBase
     {
         return '/api/analytics/v1/sessions/';
     }
-
 }
-

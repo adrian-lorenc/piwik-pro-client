@@ -14,7 +14,6 @@ use PiwikPro\ReportingApi\ClientInterface;
  */
 class ClientBuilder implements ClientBuilderInterface
 {
-
     /**
      * Constructs a new ClientBuilder.
      *
@@ -28,8 +27,8 @@ class ClientBuilder implements ClientBuilderInterface
     protected function __construct(
         protected string $baseUri,
         protected string $clientId,
-        protected string $clientSecret)
-    {
+        protected string $clientSecret
+    ) {
     }
 
     /**
@@ -72,5 +71,4 @@ class ClientBuilder implements ClientBuilderInterface
     {
         return new static($baseUri, $clientId, $clientSecret);
     }
-
 }

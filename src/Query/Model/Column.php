@@ -11,7 +11,6 @@ use PiwikPro\ReportingApi\Query\JsonSerializer;
  */
 class Column implements \JsonSerializable
 {
-
     use JsonSerializer;
 
     /**
@@ -27,11 +26,8 @@ class Column implements \JsonSerializable
      */
     public function __construct(
         protected string $column_id,
-        protected ?string $transformation_id = NULL,
-        protected ?int $goal_id = NULL
-    )
-    {
+        protected ?string $transformation_id = null,
+        protected ?int $goal_id = null
+    ) {
     }
-
 }
-

@@ -7,7 +7,6 @@ namespace PiwikPro\ReportingApi\Query\Parameter;
  */
 trait OffsetTrait
 {
-
     /**
      * Number of rows to skip before beginning to return rows.
      *
@@ -30,5 +29,4 @@ trait OffsetTrait
 
         return $this;
     }
-
 }

@@ -9,7 +9,6 @@ use PiwikPro\ReportingApi\Query\Model\RelativeDate;
  */
 trait RelativeDateTrait
 {
-
     /**
      * Use relative date in query.
      *
@@ -34,5 +33,4 @@ trait RelativeDateTrait
 
         return $this;
     }
-
 }

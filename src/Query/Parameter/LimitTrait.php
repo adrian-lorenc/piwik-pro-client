@@ -2,13 +2,11 @@
 
 namespace PiwikPro\ReportingApi\Query\Parameter;
 
-
 /**
  * Limit param.
  */
 trait LimitTrait
 {
-
     /**
      * Number of rows to return.
      *
@@ -31,5 +29,4 @@ trait LimitTrait
 
         return $this;
     }
-
 }

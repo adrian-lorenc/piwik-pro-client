@@ -10,7 +10,6 @@ use PiwikPro\ReportingApi\Query\QueryInterface;
  */
 interface ClientInterface
 {
-
     /**
      * Performs query.
      *
@@ -23,5 +22,4 @@ interface ClientInterface
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function request(QueryInterface & \JsonSerializable $query): Response;
-
 }

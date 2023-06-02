@@ -9,7 +9,6 @@ use PiwikPro\ReportingApi\Query\Model\Date;
  */
 trait DateFromTrait
 {
-
     /**
      * Start date for the query (inclusive).
      *
@@ -35,5 +34,4 @@ trait DateFromTrait
 
         return $this;
     }
-
 }

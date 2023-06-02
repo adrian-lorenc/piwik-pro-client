@@ -11,7 +11,6 @@ use PiwikPro\ReportingApi\Query\QueryInterface;
  */
 class Client implements ClientInterface
 {
-
     /**
      * Constructs a new client object.
      *
@@ -19,8 +18,8 @@ class Client implements ClientInterface
      *   The Guzzle HTTP client.
      */
     public function __construct(
-        protected GuzzleHttpClientInterface $guzzleHTTPClient)
-    {
+        protected GuzzleHttpClientInterface $guzzleHTTPClient
+    ) {
     }
 
     /**
@@ -31,8 +30,7 @@ class Client implements ClientInterface
         return $this->guzzleHTTPClient->post($query->getUri(), [
             'body' => json_encode($query),
             'headers' => ['Accept-Encoding' => 'gzip'],
-            'decode_content' => TRUE,
+            'decode_content' => true,
         ]);
     }
-
 }

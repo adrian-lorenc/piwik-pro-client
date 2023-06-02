@@ -2,14 +2,13 @@
 
 namespace PiwikPro\ReportingApi\Query\Model;
 
-use \DateTimeInterface;
+use DateTimeInterface;
 
 /**
  * Date param.
  */
 class Date implements \JsonSerializable
 {
-
     /**
      * Constructs Date.
      *
@@ -27,5 +26,4 @@ class Date implements \JsonSerializable
     {
         return $this->date->format('Y-m-d');
     }
-
 }

@@ -7,7 +7,6 @@ namespace PiwikPro\ReportingApi\Query;
  */
 trait JsonSerializer
 {
-
     /**
      * It serializes object.
      *
@@ -20,5 +19,4 @@ trait JsonSerializer
             return !is_null($value);
         });
     }
-
 }

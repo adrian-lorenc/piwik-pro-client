@@ -36,8 +36,7 @@ abstract class QueryBase implements \JsonSerializable, QueryInterface
      */
     public function __construct(
         protected string $website_id
-    )
-    {
+    ) {
     }
 
     /**

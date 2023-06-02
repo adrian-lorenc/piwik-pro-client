@@ -9,7 +9,6 @@ namespace PiwikPro\ReportingApi\Query;
  */
 class DirectQuery extends QueryBase
 {
-
     /**
      * {@inheritdoc}
      */
@@ -17,6 +16,4 @@ class DirectQuery extends QueryBase
     {
         return '/api/analytics/v1/query/';
     }
-
 }
-

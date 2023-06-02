@@ -7,7 +7,6 @@ namespace PiwikPro\ReportingApi\Query\Model;
  */
 enum RelativeDate: string implements \JsonSerializable
 {
-
     case Today = 'today';
     case Yesterday = 'yesterday';
     case lastWeek = 'last_week';
@@ -21,5 +20,4 @@ enum RelativeDate: string implements \JsonSerializable
     {
         return $this->value;
     }
-
 }

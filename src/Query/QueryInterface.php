@@ -7,7 +7,6 @@ namespace PiwikPro\ReportingApi\Query;
  */
 interface QueryInterface
 {
-
     /**
      * Gets query uri.
      *
@@ -15,5 +14,4 @@ interface QueryInterface
      *   Query uri.
      */
     public function getUri(): string;
-
 }

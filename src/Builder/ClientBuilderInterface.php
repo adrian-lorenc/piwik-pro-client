@@ -9,7 +9,6 @@ use PiwikPro\ReportingApi\ClientInterface;
  */
 interface ClientBuilderInterface
 {
-
     /**
      * Returns a new Client Builder using default settings.
      *
@@ -31,5 +30,4 @@ interface ClientBuilderInterface
      * @return \PiwikPro\ReportingApi\ClientInterface
      */
     public function buildClient(): ClientInterface;
-
 }

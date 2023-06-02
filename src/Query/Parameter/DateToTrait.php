@@ -2,7 +2,6 @@
 
 namespace PiwikPro\ReportingApi\Query\Parameter;
 
-
 use PiwikPro\ReportingApi\Query\Model\Date;
 
 /**
@@ -10,7 +9,6 @@ use PiwikPro\ReportingApi\Query\Model\Date;
  */
 trait DateToTrait
 {
-
     /**
      * End date for the query (inclusive).
      *
@@ -36,5 +34,4 @@ trait DateToTrait
 
         return $this;
     }
-
 }
