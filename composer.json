@@ -28,10 +28,10 @@
   },
   "require-dev": {
     "composer/composer": "^2.0",
-    "overtrue/phplint": "^4.0",
-    "phpspec/prophecy": "^1.12",
-    "phpunit/phpunit": "^9.5",
-    "squizlabs/php_codesniffer": "^3.5"
+    "overtrue/phplint": "^9.0",
+    "phpspec/prophecy": "^1.17",
+    "phpunit/phpunit": "^9.6",
+    "squizlabs/php_codesniffer": "^3.7"
   },
   "scripts": {
     "lint": "phplint --no-cache src/",
