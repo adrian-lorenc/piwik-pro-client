@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace PiwikPro\ReportingApi\Query\Model;
 
 use JsonSerializable;
@@ -7,7 +9,7 @@ use JsonSerializable;
 /**
  * Logical operator (AND/OR) for the clause.
  */
-enum Operator implements JsonSerializable
+enum LogicalOperator implements JsonSerializable
 {
     case and;
     case or;

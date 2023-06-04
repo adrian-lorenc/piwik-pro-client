@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace PiwikPro\ReportingApi\Query\Parameter;
 
 use PiwikPro\ReportingApi\Query\Model\RelativeDate;

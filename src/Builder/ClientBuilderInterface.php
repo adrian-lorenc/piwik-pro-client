@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace PiwikPro\ReportingApi\Builder;
 
 use PiwikPro\ReportingApi\ClientInterface;

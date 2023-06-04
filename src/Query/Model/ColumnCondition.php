@@ -5,15 +5,12 @@ declare(strict_types=1);
 namespace PiwikPro\ReportingApi\Query\Model;
 
 use JsonSerializable;
-use PiwikPro\ReportingApi\Query\JsonSerializer;
 
 /**
  * Definition of the condition for column.
  */
 class ColumnCondition implements JsonSerializable
 {
-    use JsonSerializer;
-
     /**
      * Constructs ColumnCondition.
      *
@@ -26,7 +23,17 @@ class ColumnCondition implements JsonSerializable
     public function __construct(
         protected ColumnOperator $operator,
         protected mixed $value
-    )
+    ) {
+    }
+
+    /**
+     * It serializes object.
+     *
+     * @return array
+     *   Serialized object.
+     */
+    public function jsonSerialize(): array
     {
+        return get_object_vars($this);
     }
 }
