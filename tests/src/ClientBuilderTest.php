@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace PiwikPro\ReportingApi\tests;
 
 use PHPUnit\Framework\TestCase;
