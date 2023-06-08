@@ -23,7 +23,7 @@ This project can be installed using Composer. Run composer require adrian-lorenc
 
 require '../vendor/autoload.php';
 
-use PiwikPro\ReportingApi\Builder\ClientBuilder;
+use PiwikPro\ReportingApi\Client;
 use PiwikPro\ReportingApi\Query\DirectQuery;
 use PiwikPro\ReportingApi\Query\Model\Column;
 use PiwikPro\ReportingApi\Query\Model\Date;
@@ -34,10 +34,11 @@ use PiwikPro\ReportingApi\Query\Model\Condition;
 use PiwikPro\ReportingApi\Query\Model\Filter;
 use PiwikPro\ReportingApi\Query\Model\LogicalOperator;
 
-$client = (ClientBuilder::create('https://xyz.piwik.pro',
+$client = Client::create(
+    'https://xyz.piwik.pro',
     'client_id',
     'client_secret'
-))->buildClient();
+);
 
 $dateFrom = new Date(new DateTime('01/01/2021'));
 $dateTo = new Date(new DateTime('03/30/2021'));
@@ -69,5 +70,4 @@ echo "\n" . '--------------------------------------------------' . "\n";
 echo 'Service response:' . "\n";
 var_dump(json_decode($client->request($query)->getBody()->getContents()));
 echo '</pre>';
-
 ```

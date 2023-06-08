@@ -9,7 +9,6 @@ use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
-use PiwikPro\ReportingApi\Builder\ClientBuilder;
 use PiwikPro\ReportingApi\Client as PiwikProClient;
 use PiwikPro\ReportingApi\ClientInterface;
 use PiwikPro\ReportingApi\Query\DirectQuery;
@@ -17,20 +16,20 @@ use PiwikPro\ReportingApi\Query\DirectQuery;
 /**
  * Tests for the ClientBuilder class.
  *
- * @coversDefaultClass \PiwikPro\ReportingApi\Builder\ClientBuilder
+ * @coversDefaultClass \PiwikPro\ReportingApi\Client
  */
-class ClientBuilderTest extends TestCase
+class ClientTest extends TestCase
 {
     /**
      * Test client creation.
      */
     public function testCreation(): void
     {
-        $client = (ClientBuilder::create(
+        $client = PiwikProClient::create(
             'https://github.com/adrian-lorenc/piwik-pro-reporting-api',
             'client_id',
             'client_secret'
-        ))->buildClient();
+        );
 
         $this->assertInstanceOf(ClientInterface::class, $client);
     }

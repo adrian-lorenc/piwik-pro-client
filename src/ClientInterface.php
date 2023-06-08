@@ -15,6 +15,21 @@ use PiwikPro\ReportingApi\Query\QueryInterface;
 interface ClientInterface
 {
     /**
+     * Returns a new client using default settings.
+     *
+     * @param string $baseUri
+     *   The URL of the Piwik Pro server.
+     * @param string $clientId
+     *   Client id.
+     * @param string $clientSecret
+     *   Client secret.
+     *
+     * @return ClientInterface
+     *   Piwik Pro client.
+     */
+    public static function create(string $baseUri, string $clientId, string $clientSecret): ClientInterface;
+
+    /**
      * Performs query.
      *
      * @param JsonSerializable&QueryInterface $query
