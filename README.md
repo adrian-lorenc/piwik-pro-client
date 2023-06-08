@@ -1,5 +1,20 @@
 # Piwik Pro Reporting API
 
+## Description
+Allows to query following resources:
+ * https://developers.piwik.pro/en/latest/custom_reports/http_api/http_api.html#tag/Queries
+ * https://developers.piwik.pro/en/latest/custom_reports/http_api/http_api.html#tag/Raw-data/paths/~1api~1analytics~1v1~1sessions~1/post
+ * https://developers.piwik.pro/en/latest/custom_reports/http_api/http_api.html#tag/Raw-data/paths/~1api~1analytics~1v1~1events~1/post
+
+## Installation 
+This project can be installed using Composer. Run composer require adrian-lorenc/piwik-pro-reporting-api or add the following to your composer.json:
+```json
+{
+  "require": {
+    "adrian-lorenc/piwik-pro-reporting-api": "dev-develop"
+  }
+}
+```
 
 ## Usage
 
